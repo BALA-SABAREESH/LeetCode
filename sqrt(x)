@@ -1,0 +1,16 @@
+class Solution {
+    public int mySqrt(int x) {
+         int a=2;
+         if(x == 0) 
+         return 0;
+
+         while(a<=x/a){
+            if(a==(long)x/a){
+                return a;
+            }
+            a++;
+         }
+         return a-1;
+         
+    }
+}
