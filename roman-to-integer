@@ -1,0 +1,40 @@
+class Solution {
+    public int romanToInt(String s) {
+       int a=0,b=0,add=0;
+       for(int i=s.length()-1;i>=0;i--){
+        char c=s.charAt(i);
+         switch (c) {
+            case 'I':
+            add=1;
+            break;
+            case 'V': 
+            add=5;
+            break;
+            case 'X': 
+            add=10;
+            break;
+            case 'L': 
+            add=50;
+            break;
+            case 'C': 
+            add=100;
+            break;
+            case 'D': 
+            add=500;
+            break;
+            case 'M': 
+             add=1000;
+             break;
+           default:
+           break;
+       }
+       if(add<a){
+        b=b-add;
+       }else{
+        b=b+add;
+       }
+       a=add;
+       }
+   return b;
+    }
+}
